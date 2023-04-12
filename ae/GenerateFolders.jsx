@@ -13,6 +13,10 @@
  Usage:
 	In After Effects 2023 or later, run the script
 	Hit Generate Folders!
+
+ Todo:
+	- User interface panel
+	- project structure templates
 */
 
   
