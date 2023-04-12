@@ -10,11 +10,19 @@ Extensions To Install:
 
 TypeScript types: https://github.com/aenhancers/Types-for-Adobe
     
-## Guides
-- After Effects Scripting Guide - https://ae-scripting.docsforadobe.dev/
-- UI Reference Guide - https://fotozcech.cz/wp-content/uploads/2015/11/scriptui-2-8.pdf
-- After Effects Scripting Guide - https://ae-scripting.docsforadobe.dev/
+## Guides & Reference
 
+### Scripting
+- After Effects Scripting Guide - https://ae-scripting.docsforadobe.dev/
+- ExtendScript Reference: https://extendscript.docsforadobe.dev/
+
+### UI
+- UI Reference Guide - https://fotozcech.cz/wp-content/uploads/2015/11/scriptui-2-8.pdf
+
+### CEP
+- Getting Started with Common Extensibility Platform (CEP): https://github.com/Adobe-CEP/CEP-Resources
+- CEP Samples: https://github.com/Adobe-CEP/Samples
+- Getting Started with CEP Extensions: https://github.com/Adobe-CEP/Getting-Started-guides
 
 ## UI
 There are 2 types of interface: floating and dockable.
