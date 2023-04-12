@@ -3,6 +3,7 @@ Repo for the Digiatal Experience Content Authors team's animation scripts for Af
 
 ## Visual Studio Code
 Download: https://code.visualstudio.com/Download
+
 Extensions To Install:
 - ExtendScript Debugger (by Adobe)
 - Adobe Script Runner (by renderTom)
