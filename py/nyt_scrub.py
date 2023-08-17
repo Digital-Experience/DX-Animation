@@ -25,7 +25,9 @@ from dateutil.relativedelta import relativedelta
 
 end = datetime.date.today()
 start = end - relativedelta(years=124)
-months_in_range = [x.split(' ') for x in pd.date_range(start, end, freq='MS').strftime("%Y %-m").tolist()]
+months_in_range = [x.split(' ') for x in pd.date_range(start, end, freq='MS').strftime("%Y %#m").tolist()]
+
+print(start, end, months_in_range)
 
 def send_request(date):
     '''Sends a request to the NYT Archive API for given date.'''
