@@ -1,18 +1,20 @@
 """
+Copyright: (C)2023 Esri
+Author: Rich Spencer
+
+Description:
+    This script will scan the provided directory for formatted csv files and import the x/y coordinates
+    into an empty polygon as points.
 
 """
 __author__ = "Rich Spencer"
 __copyright__ = "Copyright (C) 2023 Esri"
 __version__ = "R2024"
 
-
-from typing import Optional
 import c4d
 import csv
 import os
 
-doc: c4d.documents.BaseDocument  # The active document
-op: Optional[c4d.BaseObject]  # The active object, None if unselected
 
 class UserDialog(c4d.gui.GeDialog):
     ID_FILENAME = 1002
@@ -21,7 +23,8 @@ class UserDialog(c4d.gui.GeDialog):
     ID_GROUP = 10000
     
     def CreateLayout(self) -> bool:
-        """Called by Cinema 4D to populate the dialog with gadgets.
+        """
+        Called by Cinema 4D to populate the dialog with gadgets.
         """
         # Set the title of the dialog
         self.SetTitle("Import CSV to Points")
@@ -45,13 +48,17 @@ class UserDialog(c4d.gui.GeDialog):
     
     
     def InitValues(self) -> bool:
-        """Called by Cinema 4D to initialize the layout"""
+        """
+        Called by Cinema 4D to initialize the layout
+        """
         self.SetFilename(UserDialog.ID_FILENAME, "")
         return super().InitValues()
     
     @staticmethod
     def ReadFile(filepath: str) -> str:
-        """Custom static function to read the content of a file into a string"""
+        """
+        Custom static function to read the content of a file into a string
+        """
         if not os.path.exists(filename):
             raise OSError("Could nto access file!")
         
@@ -64,7 +71,9 @@ class UserDialog(c4d.gui.GeDialog):
         
     
     def Command(self, mid: int, msg: c4d.BaseContainer) -> bool:
-        """Called by Cinema 4D when the user interacts with a gadget in the dialog"""
+        """
+        Called by Cinema 4D when the user interacts with a gadget in the dialog
+        """
         # The "Run" button has been pressed
         if mid == UserDialog.ID_BUTTON:
             path = self.GetFilename(UserDialog.ID_FILENAME)
@@ -109,7 +118,9 @@ class UserDialog(c4d.gui.GeDialog):
 
 
 def main() -> None:
-    """ Opens the dialog. """
+    """
+    Opens the dialog.
+    """
     
     # Instantiate the dialog
     dialog = UserDialog()
